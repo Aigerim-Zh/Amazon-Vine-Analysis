@@ -18,8 +18,8 @@ The code for this deliverable: [Amazon_Reviews_ETL.ipynb](https://github.com/Aig
 - I created a database with Amazon RDS. 
 - ```PostgreSQL 13.4-R1``` is used as an engine for this database. So, I connected ```pgAdmin``` to the ```AWS RDS``` instance.
 - Then I run the database schema ([challenge_schema.sql](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/challenge_schema.sql)) in the Query Tool to create four tables: ```customers_table```, ```products_table```, ```review_id_table```, and ```vine_table```.
-- Next, as we are dealing with millions of observations, I uploaded [Amazon_Reviews_ETL.ipynb](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Amazon_Reviews_ETL.ipynb) as a ```Google Colaboratory``` notebook to import PySpark libraries and connect to the AWS RDS instance and export tables to Postgres.
-- After extracting my dataset of choice, I transformed it into four DataFrames that match the schema in the pgAdmin tables.
+- Next, as we are dealing with millions of observations, I uploaded [Amazon_Reviews_ETL.ipynb](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Amazon_Reviews_ETL.ipynb) as a ```Google Colaboratory``` notebook to import ```PySpark``` libraries and connect to the ```AWS RDS``` instance and export tables to ```Postgres```.
+- After extracting my dataset of choice, I transformed it into four DataFrames that match the schema in the ```pgAdmin``` tables.
 
 ## The customers_table DataFrame
 ![](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Images/customers_df_table.png)
@@ -42,14 +42,14 @@ The code for this deliverable: [Amazon_Reviews_ETL.ipynb](https://github.com/Aig
 ## The vine_table DataFrame
 ![](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Images/vine_df.png)
 
-![](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Images/sql_review_id_table.png)
+![](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Images/sql_vine_table.png)
 
 
 # Deliverable 2. Determine Bias of Vine Reviews
 
 The code for this deliverable: [Vine_Review_Analysis.ipynb](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Vine_Review_Analysis.ipynb)
 
-In this deliverable, I examined if there is any bias towards reviews that were written as part of the Vine program, in other words, if having a paid Vine review makes a difference in the percentage of 5-star reviews.
+In this deliverable, I examined if there is any bias toward reviews that were written as part of the Vine program, in other words, if having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
 I followed the following steps to get the final result:
 * Extracted the dataset from the previous deliverable and dropped all non-existent values.
@@ -65,7 +65,7 @@ I followed the following steps to get the final result:
 ![](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Images/Deliverable%202/total_votes_20_or_more.png)
 
 
-* Then, further filtered the dataset to the percentage of helpful votes equal to or greater than 50. 
+* Then further filtered the dataset to the percentage of helpful votes equal to or greater than 50. 
 
 ![](https://github.com/Aigerim-Zh/Amazon-Vine-Analysis/blob/main/Images/Deliverable%202/helpful_votes_50%25.png)
 
